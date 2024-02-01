@@ -1,0 +1,45 @@
+body{
+    font-family: monospace;
+    background-color: antiquewhite;
+
+}
+#navbar{
+    width: 98.5%;
+    background-color: black;
+    border-radius: 15px;
+    padding: 10px;
+}
+a{
+    border-radius: 15px;
+    color: antiquewhite;
+    font-family: monospace;
+    font-size: larger;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+a:hover{
+    color: rgb(247, 188, 112);
+    background-color: #1f1f1f;
+}
+#container{
+    background-color: #313131;
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10%;
+    margin-left: 40%;
+    overflow: hidden;
+    box-shadow: 0 0 10px;
+    text-align: center;
+}
+#box{
+    border-radius: 10px;
+    background-color: black;
+    height: 200%;
+
+}
+#submit{
+    border-radius: 15px;
+    background-color: antiquewhite;
+}
