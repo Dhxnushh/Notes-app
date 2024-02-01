@@ -32,11 +32,14 @@ a:hover{
     overflow: hidden;
     box-shadow: 0 0 10px;
     text-align: center;
+    overflow-wrap: break-word;
+
 }
 #box{
     border-radius: 10px;
     background-color: black;
     height: 200%;
+    color: antiquewhite;
 
 }
 #submit{

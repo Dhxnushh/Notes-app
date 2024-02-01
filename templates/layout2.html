@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="static/styles2.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="container">
+            <a href="/home">Home</a>
+            <button onclick="save()" id="lol">Save</button>
+            <a href="/logout">Logout</a>
+    </nav>
+    <textarea id="notes" style="background-color: antiquewhite; width: 100%;height: 89.9vh; border: none; font-size: large;"></textarea>
+    <script>
+        function save(){
+            let notes = document.getElementById("notes")
+            console.log(notes.value)
+        }
+    </script>
+</body>
+</html>

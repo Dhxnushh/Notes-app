@@ -1,0 +1,42 @@
+body{
+    background-color: antiquewhite;
+    font-family: monospace;
+    font-size: larger;
+}
+#container{
+    background-color: #313131;
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 38.5%;
+    overflow: hidden;
+    box-shadow: 0 0 10px;
+    text-align: center;
+}
+a{
+    border-radius: 15px;
+    color: antiquewhite;
+    font-family: monospace;
+    font-size: larger;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+a:hover{
+    color: rgb(247, 188, 112);
+    background-color: #1f1f1f;
+}
+#lol{
+    border-radius: 15px;
+    background-color: transparent;
+    border: none;
+    color: antiquewhite;
+    font-family: monospace;
+    font-size: larger;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#lol:hover{
+    color: rgb(247, 188, 112);
+    background-color: #1f1f1f;
+}
