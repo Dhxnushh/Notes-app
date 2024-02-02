@@ -15,9 +15,18 @@
     <textarea id="notes" style="background-color: antiquewhite; width: 100%;height: 89.9vh; border: none; font-size: large;"></textarea>
     <script>
         function save(){
-            let notes = document.getElementById("notes")
-            console.log(notes.value)
+            var notes = document.getElementById("notes")
+            fetch("/home",{
+                method:"post",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(notes.value)
+            })
         }
+        note = document.getElementById('notes');
+        note.value = data;
+        console.log(data)
     </script>
 </body>
 </html>

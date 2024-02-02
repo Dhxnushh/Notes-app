@@ -1,4 +1,4 @@
-from flask import Flask,render_template,redirect,session,request
+from flask import Flask,render_template,redirect,session,request,jsonify
 from cs50 import SQL
 app = Flask(__name__)
 db = SQL("sqlite:///user.db")
@@ -12,9 +12,9 @@ def login():
         password = request.form.get('passwor')
         rows = db.execute('select * from users where name = ?',username)
         if len(rows)!=1:
-            return render_template("/",error="Username does not exist")
+            return render_template("login.html",error="Username does not exist")
         if rows[0]['hash']!=password:
-            return render_template("/",error="Password is incorrect")
+            return render_template("login.html",error="Password is incorrect")
         else:
             session['un']=rows[0]['name']
             session['id']=rows[0]['id']
@@ -45,7 +45,13 @@ def register():
 def home():
     if  len(session)==0:
         return redirect("/")
-    return render_template("layout2.html")
+    if request.method =="POST":
+        json = request.get_json()
+        db.execute('delete from notes where id = ?',session['id'])
+        db.execute('insert into notes(id,notes) values(?,?)',session['id'],json)
+    notes = db.execute('select * from notes where id = ?',session['id'])
+    data = notes[0]['notes']
+    return render_template("layout2.html",data=data)
 
 
 @app.route("/logout")
